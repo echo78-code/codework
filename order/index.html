@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Order</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Order
+				</span>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Service</span>
+					<div>
+						<select id="service" class="selection-2" name="service">
+							<option>Select Type</option>
+							<option>Project</option>
+							<option>Paper</option>
+							<option>Presentation</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Title</span>
+					<input class="input100" type="text" name="title" placeholder="Enter title">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Subject</span>
+					<div>
+						<select class="selection-2" name="subject">
+							<option>Choose Subject</option>
+							<option>C++</option>
+							<option>Java</option>
+							<option>Python</option>
+							<option>C</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Academic Level</span>
+					<div>
+						<select class="selection-2" name="acad_level">
+							<option>Kya hote hai academic level?</option>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="A document is required for verification!">
+					<span class="label-input100">Upload an ID or any other verifiable document</span>
+					<input style="margin-top: 15px;" class="input100" type="file" name="doc" placeholder="Enter final date">
+					<span class="focus-input100"></span>
+				</div>
+
+				<!-- number of pages -->
+				<div id="pages" style="display: none;" class="wrap-input100 validate-input" data-validate="A document is required for verification!">
+					<span class="label-input100">Number of pages</span>
+					<input style="margin-top: 15px;" class="input100" type="number" name="pages" placeholder="Enter number of pages">
+					<span class="focus-input100"></span>
+				</div>
+
+				<!-- number of slides -->
+				<div id="slides" style="display: none;" class="wrap-input100 validate-input" data-validate="A document is required for verification!">
+					<span class="label-input100">Number of slides</span>
+					<input style="margin-top: 15px;" class="input100" type="number" name="slides" placeholder="Enter number of slides">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Description is required">
+					<span class="label-input100">Description</span>
+					<textarea class="input100" name="message" placeholder="Describe it a little... "></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Deadline is required">
+					<span class="label-input100">What's the deadline?</span>
+					<input class="input100" type="date" name="deadline" placeholder="Enter final date">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.js"></script>
+
+	<script src="js/main.js"></script>
+	<!-- <script src="js/sec.js"></script> -->
+
+</script>
+
+</body>
+</html>
